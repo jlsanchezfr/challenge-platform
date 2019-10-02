@@ -1,0 +1,7 @@
+dev:
+  host: sensisagency.com
+  user: cristian100
+  root: /var/www/drupal/d8/challengeplatform/dev/docroot
+  uri: challengeplatform.dev.sensisagency.com
+  paths:
+    drush-script: '/var/www/drupal/d8/challengeplatform/dev/vendor/drush/drush/drush'
