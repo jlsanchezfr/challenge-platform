@@ -1,0 +1,14 @@
+uuid: 6120b6ae-0934-415d-9c3c-ed54e9b90291
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.project_owner
+  module:
+    - user
+id: user_add_role_action.project_owner
+label: 'Add the Project Owner role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: project_owner

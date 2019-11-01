@@ -1,0 +1,22 @@
+uuid: 37d944d7-991a-4c54-a134-6f53b6b49565
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - challengeplatform
+_core:
+  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
+id: challengeplatform_powered
+theme: challengeplatform
+region: footer
+weight: -10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

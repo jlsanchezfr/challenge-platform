@@ -1,0 +1,18 @@
+uuid: d14c0ea2-1ad5-4401-a908-93a18f5eb961
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: submission
+type: submission
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

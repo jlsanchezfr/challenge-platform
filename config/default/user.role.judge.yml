@@ -1,0 +1,14 @@
+uuid: 2b9efa03-c032-4dcd-8d3f-45240daa92b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: judge
+label: Judge
+weight: 4
+is_admin: null
+permissions: {  }

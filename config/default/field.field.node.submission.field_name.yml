@@ -1,0 +1,19 @@
+uuid: 6258fb6e-b3b4-4dff-9399-02bf1eec9818
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_name
+    - node.type.submission
+id: node.submission.field_name
+field_name: field_name
+entity_type: node
+bundle: submission
+label: Name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

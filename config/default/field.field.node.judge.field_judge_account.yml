@@ -1,0 +1,32 @@
+uuid: 801b2239-6909-4cd3-9756-dea243c72b10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_judge_account
+    - node.type.judge
+id: node.judge.field_judge_account
+field_name: field_judge_account
+entity_type: node
+bundle: judge
+label: 'Judge Account'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: role
+      role:
+        judge: judge
+        administrator: '0'
+        project_owner: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

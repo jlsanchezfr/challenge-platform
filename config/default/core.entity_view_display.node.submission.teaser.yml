@@ -1,0 +1,31 @@
+uuid: 2088d926-845d-4269-834b-d6c817e3d63b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.submission.body
+    - node.type.submission
+  module:
+    - text
+    - user
+id: node.submission.teaser
+targetEntityType: node
+bundle: submission
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

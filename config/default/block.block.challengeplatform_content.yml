@@ -1,0 +1,22 @@
+uuid: e67f2a77-31b3-4b9b-8691-aadae5e9d0e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - challengeplatform
+_core:
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: challengeplatform_content
+theme: challengeplatform
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,31 @@
+uuid: 9d31049e-b578-4136-994b-c7105a14df46
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.judge.body
+    - node.type.judge
+  module:
+    - text
+    - user
+id: node.judge.teaser
+targetEntityType: node
+bundle: judge
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

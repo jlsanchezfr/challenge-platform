@@ -1,0 +1,22 @@
+uuid: 0cb5f8de-27bc-4c4a-a07d-fbc603936610
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - challengeplatform
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: challengeplatform_help
+theme: challengeplatform
+region: help
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }
