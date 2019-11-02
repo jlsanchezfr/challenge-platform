@@ -2,6 +2,7 @@
 
 namespace Drupal\challenge_platform\Form;
 
+use Drupal\taxonomy\Entity\Term;
 use Drupal\node\Entity\Node;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -90,6 +91,7 @@ class HelloForm extends FormBase {
       '#type' => 'submit',
       '#value' => $this->t('Submit'),
     ];
+
     return $form;
 
   }
@@ -156,11 +158,14 @@ class HelloForm extends FormBase {
  * Form campaings provider returns value_campaing values.
  */
 function get_campaing_values() {
-  $value_campaing = [
-    'campaing 1',
-    'campaing 2',
-    'campaing 3',
-    'campaing 4',
-  ];
+  $query = \Drupal::entityQuery('taxonomy_term');
+  $query->condition('vid', 'campaing_1');
+  $tids = $query->execute();
+  $terms = Term::loadMultiple($tids);
+
+  foreach ($terms as $term) {
+    $tid = $term->id();
+    $value_campaing[$tid] = $term->getName();
+  }
   return $value_campaing;
 }

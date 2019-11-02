@@ -1,1 +1,37 @@
+<?php
 
+/**
+ * @file
+ * Add filtering nodes which have the the same user assigned as the one logged.
+ */
+
+use Drupal\views\ViewExecutable;
+
+/**
+ * Filter submissions and return submissions which match field_judge with the judge logged in.
+ */
+function challengeplatform_views_pre_render(ViewExecutable $view) {
+  if ($view->id() == 'submissions' && $view->current_display == 'page_1') {
+    $results = $view->result;
+    $countResults = count($results);
+    $resultsArray = 0;
+    for ($i = 0; $i <= $countResults - 1; $i++) {
+      $isAssigned = $results[$i]->_entity->get('field_judge')->getValue();
+      $isAssigned = $isAssigned[0]['target_id'];
+      $uid = \Drupal::currentUser()->id();
+      if ($isAssigned == $uid) {
+        $assignResults = $results[$i];
+        $results[$i]->_index = $resultsArray;
+        $temp[$resultsArray] = $assignResults;
+        $resultsArray++;
+      }
+
+    }
+
+    if (isset($temp)) {
+      $view->result = $temp;
+    }
+
+  }
+
+}

@@ -1,5 +1,4 @@
 hello.content:
-  path: '/form'
   defaults:
     _plugin: 'Drupal\Plugin\Block\FormBlock'
     _title: 'Hello World'
