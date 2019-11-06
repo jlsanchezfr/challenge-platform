@@ -17,6 +17,7 @@
         "drupal/core": "^8.6.0",
         "drupal/devel": "^2.0.0",
         "drupal/features": "^3.8.0",
+        "drupal/paragraphs": "^1.10",
         "drupal/qa_accounts": "^1.0.0-alpha1",
         "drupal/seckit": "^1.0.0-alpha2",
         "drupal/shield": "^1.2.0"
