@@ -2,7 +2,7 @@
 
 namespace Drupal\challenge_platform\Form;
 
-use Drupal\taxonomy\Entity\Term;
+use Drupal\node\NodeInterface;
 use Drupal\node\Entity\Node;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -39,31 +39,37 @@ class HelloForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
-    $value_campaing = get_campaing_values();
-
     $form['description'] = [
       '#type' => 'item',
-      '#markup' => $this->t('Please enter the title and accept the terms of use of the site.'),
+      '#markup' => $this->t('Please enter the title.'),
     ];
 
-    $form['campaing_options'] = [
-      '#type' => 'value',
-      '#value' => $value_campaing,
-    ];
-
-    $form['campaing'] = [
-      '#type' => 'select',
-      '#title' => 'Campaing',
-      '#options' => $form['campaing_options']['#value'],
-      '#description' => $this->t('Select what campaing you want to apply'),
-      '#required' => TRUE,
-    ];
-
-    $form['name'] = [
+    $form['submit_name'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Name'),
-      '#description' => $this->t('Enter your name'),
+      '#title' => $this->t('Submission Name'),
+      '#description' => $this->t('Enter the submission´s name'),
       '#required' => TRUE,
+    ];
+
+    $form['lead_name'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Team Lead Name'),
+      '#description' => $this->t('Enter the team lead name'),
+      '#required' => TRUE,
+    ];
+
+    $validators = [
+      'file_validate_extensions' => ['pdf'],
+    ];
+
+    $form['pdf_file'] = [
+      '#type' => 'managed_file',
+      '#name' => 'submission_document',
+      '#title' => t('Submission PDF'),
+      '#size' => 80,
+      '#description' => t('PDF format only'),
+      '#upload_validators' => $validators,
+      '#upload_location' => 'public://docroot/sites/default/files/pdf',
     ];
 
     $form['body'] = [
@@ -71,12 +77,6 @@ class HelloForm extends FormBase {
       '#title' => $this->t('Body'),
       '#description' => $this->t('Enter your proposal for this campaing'),
       '#required' => TRUE,
-    ];
-
-    $form['accept'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('I accept the terms of use of the site'),
-      '#description' => $this->t('Please read and accept the terms of use'),
     ];
 
     // Group submit handlers in an actions element with a key of "actions" so
@@ -107,18 +107,6 @@ class HelloForm extends FormBase {
   public function validateForm(array &$form, FormStateInterface $form_state) {
     parent::validateForm($form, $form_state);
 
-    $name = $form_state->getValue('name');
-    $accept = $form_state->getValue('accept');
-
-    if (strlen($name) < 10) {
-      // Set an error for the form element with a key of "title".
-      $form_state->setErrorByName('name', $this->t('The title must be at least 10 characters long.'));
-    }
-
-    if (empty($accept)) {
-      // Set an error for the form element with a key of "accept".
-      $form_state->setErrorByName('accept', $this->t('You must accept the terms of use to continue'));
-    }
   }
 
   /**
@@ -134,19 +122,19 @@ class HelloForm extends FormBase {
 
     // Redirect to home.
     $form_state->setRedirect('<front>');
-
-    $campaing_form = $form_state->getValue('campaing');
-    $campaing_form = intval($campaing_form);
-    $campaing_form = $value_campaing[$campaing_form];
-    $name_form = $form_state->getValue('name');
+    $name_form = $form_state->getValue('submit_name');
+    $lead_name_form = $form_state->getValue('lead_name');
     $title_form = $campaing_form . ' ' . $name_form;
+    $doc_form = $form_state->getValue('pdf_file');
     $body_form = $form_state->getValue('body');
 
     Node::create([
       'type' => 'submission',
       'title' => $title_form,
-      'field_campaing' => $campaing_form,
-      'field_name' => $name_form,
+      'field_campaing' => $value_campaing,
+      'field_lead_name' => $lead_name_form,
+      'field_submission_name' => $name_form,
+      'field_submission_document' => $doc_form,
       'body' => $body_form,
     ])->save();
 
@@ -158,14 +146,10 @@ class HelloForm extends FormBase {
  * Form campaings provider returns value_campaing values.
  */
 function get_campaing_values() {
-  $query = \Drupal::entityQuery('taxonomy_term');
-  $query->condition('vid', 'campaing_1');
-  $tids = $query->execute();
-  $terms = Term::loadMultiple($tids);
-
-  foreach ($terms as $term) {
-    $tid = $term->id();
-    $value_campaing[$tid] = $term->getName();
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof NodeInterface) {
+    $nid = $node->id();
   }
-  return $value_campaing;
+
+  return $nid;
 }
