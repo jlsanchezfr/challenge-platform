@@ -1,4 +1,4 @@
-uuid: 4f9348fa-c957-4d56-9c72-7ad9adcc16cb
+uuid: 611b1f61-0657-473e-a857-e6a74997ac08
 langcode: en
 status: true
 dependencies:
@@ -7,8 +7,10 @@ dependencies:
 id: node.field_score
 field_name: field_score
 entity_type: node
-type: float
-settings: {  }
+type: integer
+settings:
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1

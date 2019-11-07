@@ -1,0 +1,19 @@
+uuid: 958ee836-cd43-493e-ab75-40b13777b60c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_criteria_title
+    - paragraphs.paragraphs_type.evaluation_criteria
+id: paragraph.evaluation_criteria.field_criteria_title
+field_name: field_criteria_title
+entity_type: paragraph
+bundle: evaluation_criteria
+label: 'Criteria Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

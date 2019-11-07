@@ -1,16 +1,15 @@
-uuid: 15fc189d-b818-467f-be92-83d6b04c6da1
+uuid: b72bc4cd-6d21-4e4a-8f81-8f367bca5b0f
 langcode: en
 status: true
 dependencies:
   module:
-    - node
-    - user
-id: node.field_judge_account
-field_name: field_judge_account
-entity_type: node
-type: entity_reference
+    - paragraphs
+id: paragraph.field_question
+field_name: field_question
+entity_type: paragraph
+type: string_long
 settings:
-  target_type: user
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

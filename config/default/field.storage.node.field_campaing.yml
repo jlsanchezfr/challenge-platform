@@ -1,4 +1,4 @@
-uuid: 5087c71a-e9a5-4fba-9ca8-63815d77dfdc
+uuid: ee041c00-56c5-445b-8419-42b925c82f45
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,9 @@ dependencies:
 id: node.field_campaing
 field_name: field_campaing
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  target_type: node
 module: core
 locked: false
 cardinality: 1

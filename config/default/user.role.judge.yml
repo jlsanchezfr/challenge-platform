@@ -1,4 +1,4 @@
-uuid: 2b9efa03-c032-4dcd-8d3f-45240daa92b3
+uuid: d1813d7e-28d2-4be5-a659-95dce4aecf63
 langcode: en
 status: true
 dependencies:
@@ -9,6 +9,6 @@ third_party_settings:
     description: ''
 id: judge
 label: Judge
-weight: 4
+weight: 3
 is_admin: null
 permissions: {  }

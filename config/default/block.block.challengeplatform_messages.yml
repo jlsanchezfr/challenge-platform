@@ -1,4 +1,4 @@
-uuid: b035017b-a763-42e9-86b8-e97a171395ad
+uuid: 31e3e1e9-0747-4f54-9529-e72e8763ae5a
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   theme:
     - challengeplatform
 _core:
-  default_config_hash: 9RnnTUBcn0WRWXfrGOnId2H0Q31uQUeu_F5TnDxl2yg
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: challengeplatform_messages
 theme: challengeplatform
-region: header
-weight: -50
+region: highlighted
+weight: 0
 provider: null
 plugin: system_messages_block
 settings:

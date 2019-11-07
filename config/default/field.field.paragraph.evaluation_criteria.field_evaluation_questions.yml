@@ -1,0 +1,34 @@
+uuid: 74ddfc82-2cd3-415f-a453-e05081af2d55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_evaluation_questions
+    - paragraphs.paragraphs_type.evaluation_criteria
+    - paragraphs.paragraphs_type.evaluation_question
+  module:
+    - entity_reference_revisions
+id: paragraph.evaluation_criteria.field_evaluation_questions
+field_name: field_evaluation_questions
+entity_type: paragraph
+bundle: evaluation_criteria
+label: 'Evaluation Questions'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      evaluation_question: evaluation_question
+    target_bundles_drag_drop:
+      evaluation_question:
+        enabled: true
+        weight: 3
+      evaluation_criteria:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,11 +1,13 @@
-uuid: 1e543b71-1f41-4193-8f2d-0092797d24d7
+uuid: 6542fc4d-71b2-4ded-af74-132026c835e8
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.project.body
+    - field.field.node.project.field_evaluation_criteria_sectio
     - node.type.project
   module:
+    - entity_reference_revisions
     - text
     - user
 id: node.project.default
@@ -18,6 +20,15 @@ content:
     type: text_default
     weight: 101
     settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_evaluation_criteria_sectio:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
     region: content
   links:

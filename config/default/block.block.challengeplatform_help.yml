@@ -1,4 +1,4 @@
-uuid: 0cb5f8de-27bc-4c4a-a07d-fbc603936610
+uuid: 67dfbf2d-39d8-48b0-acb2-ca3f7fab512c
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   theme:
     - challengeplatform
 _core:
-  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
 id: challengeplatform_help
 theme: challengeplatform
-region: help
-weight: -30
+region: content
+weight: -3
 provider: null
 plugin: help_block
 settings:

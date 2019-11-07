@@ -3,7 +3,7 @@ blazy: 1.0.0-rc4
 block: 8.7.7
 block_content: 8.7.7
 breakpoint: 8.7.7
-challenge_platform: '1'
+challenge_platform: 0.0.0
 ckeditor: 8.7.7
 config: 8.7.7
 consumers: 1.9.0
@@ -25,7 +25,7 @@ entity_browser: 2.1.0
 entity_browser_block: 1.0.0
 entity_embed: 1.0.0
 entity_reference: 8.7.7
-ex81: 0.0.0
+entity_reference_revisions: 1.7.0
 field: 8.7.7
 field_ui: 8.7.7
 file: 8.7.7
@@ -84,6 +84,7 @@ options: 8.7.7
 page_cache: 8.7.7
 page_manager: 4.0.0-beta3
 panels: 4.4.0
+paragraphs: 1.10.0
 path: 8.7.7
 pathauto: 1.4.0
 quickedit: 8.7.7
@@ -111,5 +112,4 @@ video_embed_media: 2.2.0
 views: 8.7.7
 views_infinite_scroll: 1.6.0
 views_ui: 8.7.7
-webform: 5.4.0
 workflows: 8.7.7

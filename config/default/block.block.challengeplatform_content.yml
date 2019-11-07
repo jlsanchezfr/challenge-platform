@@ -1,4 +1,4 @@
-uuid: e67f2a77-31b3-4b9b-8691-aadae5e9d0e1
+uuid: fd294ada-7aff-4255-aa1b-8de7719e9981
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
   theme:
     - challengeplatform
 _core:
-  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
 id: challengeplatform_content
 theme: challengeplatform
 region: content

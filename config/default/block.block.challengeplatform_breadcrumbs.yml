@@ -1,4 +1,4 @@
-uuid: dba8c452-351b-42f2-b6ae-08b9e559d7dd
+uuid: f27c9ba5-36f3-4da6-9a91-9e4e9d244666
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   theme:
     - challengeplatform
 _core:
-  default_config_hash: wDR9JKEATSWldBjw8du8s3G2zjEYeQf88nlld11hMLo
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
 id: challengeplatform_breadcrumbs
 theme: challengeplatform
-region: header
-weight: -100
+region: navigation
+weight: 0
 provider: null
 plugin: system_breadcrumb_block
 settings:

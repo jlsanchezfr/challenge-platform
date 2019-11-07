@@ -1,12 +1,14 @@
-uuid: 5bbfd26a-91cd-4b14-ad52-31e7f9a77bca
+uuid: 7d99e782-6461-4a8a-9d86-40121637c46f
 langcode: en
 status: true
 dependencies:
   module:
-    - node
-id: node.field_name
-field_name: field_name
-entity_type: node
+    - block_content
+_core:
+  default_config_hash: nwfSZ9RX7A655QNcQOgzjzQ6OJr8KS_QOBsISKIc_P0
+id: block_content.field_map_location
+field_name: field_map_location
+entity_type: block_content
 type: string
 settings:
   max_length: 255

@@ -1,0 +1,9 @@
+uuid: 9ebed85f-fa43-4f8a-91f4-44bd93f324e8
+langcode: en
+status: true
+dependencies: {  }
+id: evaluation_criteria
+label: 'Evaluation Criteria'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,4 +1,4 @@
-uuid: 4bba0baa-5ab4-4ef7-b4b5-3e9d416e155d
+uuid: 6526f81e-6f9c-4452-b403-5fe863473415
 langcode: en
 status: true
 dependencies:
@@ -6,9 +6,9 @@ dependencies:
     - lightning_core
 third_party_settings:
   lightning_core:
-    description: 'this role is able to create projects and asigns submissions to Judges'
+    description: ''
 id: project_owner
 label: 'Project Owner'
-weight: 3
+weight: 4
 is_admin: null
 permissions: {  }

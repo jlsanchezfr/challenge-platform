@@ -1,15 +1,15 @@
-uuid: 329d883a-306d-4330-9cba-b84fde5bd5d7
+uuid: 8751f4e4-3385-4206-878b-ae2ebfdb77f4
 langcode: en
 status: true
 dependencies:
   theme:
     - challengeplatform
 _core:
-  default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
 id: challengeplatform_page_title
 theme: challengeplatform
-region: header
-weight: 0
+region: content
+weight: -5
 provider: null
 plugin: page_title_block
 settings:

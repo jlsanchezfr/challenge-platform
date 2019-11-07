@@ -1,15 +1,15 @@
-uuid: 6258fb6e-b3b4-4dff-9399-02bf1eec9818
+uuid: d70f2060-cda1-4c3d-8eb3-82c1df89e2dd
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_name
+    - field.storage.node.field_lead_name
     - node.type.submission
-id: node.submission.field_name
-field_name: field_name
+id: node.submission.field_lead_name
+field_name: field_lead_name
 entity_type: node
 bundle: submission
-label: Name
+label: 'Lead Name'
 description: ''
 required: false
 translatable: false

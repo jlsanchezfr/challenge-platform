@@ -1,0 +1,46 @@
+uuid: 0014ac76-a607-4b2f-a898-8803c6410389
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.evaluation_criteria.field_criteria_title
+    - field.field.paragraph.evaluation_criteria.field_evaluation_percentage
+    - field.field.paragraph.evaluation_criteria.field_evaluation_questions
+    - paragraphs.paragraphs_type.evaluation_criteria
+  module:
+    - paragraphs
+id: paragraph.evaluation_criteria.default
+targetEntityType: paragraph
+bundle: evaluation_criteria
+mode: default
+content:
+  field_criteria_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_evaluation_percentage:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_evaluation_questions:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,4 +1,4 @@
-uuid: 9e5c262a-a2e4-465f-8dde-c336c009d35b
+uuid: e06bf87c-6770-4568-8c0b-49a0e4e327cb
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,10 @@ dependencies:
   theme:
     - challengeplatform
 _core:
-  default_config_hash: h06zhb3xV9_2_3Zy9NsyylL7YBaEDlMwMEqNwAn8kMo
+  default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
 id: challengeplatform_footer
 theme: challengeplatform
-region: footer
+region: navigation
 weight: 0
 provider: null
 plugin: 'system_menu_block:footer'

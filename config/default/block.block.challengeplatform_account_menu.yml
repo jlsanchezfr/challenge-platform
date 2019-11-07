@@ -1,4 +1,4 @@
-uuid: a7dcc53e-eb39-4d8a-9e61-242e9e04ca4d
+uuid: 6147f81c-da2c-43b9-a57f-5197ee176c4c
 langcode: en
 status: true
 dependencies:
@@ -9,11 +9,11 @@ dependencies:
   theme:
     - challengeplatform
 _core:
-  default_config_hash: R2K_qX0ZUMbUL6ie_-S9tZVjvqmlWKlscikgeRv9vhw
+  default_config_hash: DweBpscQZdG0-fHkSpUzdYucrNH45G_KF7Z82V-oyQM
 id: challengeplatform_account_menu
 theme: challengeplatform
-region: navigation_collapsible
-weight: 11
+region: navigation
+weight: 0
 provider: null
 plugin: 'system_menu_block:account'
 settings:
@@ -22,6 +22,6 @@ settings:
   provider: system
   label_display: '0'
   level: 1
-  depth: 2
+  depth: 1
   expand_all_items: false
 visibility: {  }

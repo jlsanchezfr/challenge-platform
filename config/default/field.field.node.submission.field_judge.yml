@@ -1,4 +1,4 @@
-uuid: 4191a09d-4250-488f-a4f4-7cfbe8df2cdb
+uuid: d61acc82-7084-4c5d-9083-49ebc2e2ebff
 langcode: en
 status: true
 dependencies:
@@ -18,7 +18,7 @@ default_value_callback: ''
 settings:
   handler: 'default:user'
   handler_settings:
-    include_anonymous: false
+    include_anonymous: true
     filter:
       type: role
       role:

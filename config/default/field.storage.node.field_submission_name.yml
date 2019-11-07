@@ -1,11 +1,11 @@
-uuid: bb60ce76-e9e1-4be6-9478-a4c52056c6fb
+uuid: e82ad864-d91a-4b7d-8329-34db5fe2672a
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_judge_name
-field_name: field_judge_name
+id: node.field_submission_name
+field_name: field_submission_name
 entity_type: node
 type: string
 settings:

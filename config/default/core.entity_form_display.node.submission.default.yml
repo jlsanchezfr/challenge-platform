@@ -1,4 +1,4 @@
-uuid: 6bb66be0-8a91-4232-8896-ca38e9855795
+uuid: 558d77a5-fafd-4df6-87ef-c8310471b3f3
 langcode: en
 status: true
 dependencies:
@@ -6,11 +6,14 @@ dependencies:
     - field.field.node.submission.body
     - field.field.node.submission.field_campaing
     - field.field.node.submission.field_judge
-    - field.field.node.submission.field_name
+    - field.field.node.submission.field_lead_name
     - field.field.node.submission.field_score
+    - field.field.node.submission.field_submission_document
+    - field.field.node.submission.field_submission_name
     - node.type.submission
   module:
     - content_moderation
+    - file
     - path
     - text
 id: node.submission.default
@@ -34,15 +37,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_campaing:
-    weight: 122
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_judge:
-    weight: 126
+    weight: 128
     settings:
       match_operator: CONTAINS
       size: 60
@@ -50,8 +45,17 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_name:
-    weight: 124
+  field_judge:
+    weight: 127
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_lead_name:
+    weight: 123
     settings:
       size: 60
       placeholder: ''
@@ -59,11 +63,26 @@ content:
     type: string_textfield
     region: content
   field_score:
-    weight: 125
+    weight: 126
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_submission_document:
+    weight: 125
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_submission_name:
+    weight: 124
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   moderation_state:
     type: moderation_state_default
