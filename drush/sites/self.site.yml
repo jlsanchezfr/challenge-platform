@@ -1,5 +1,5 @@
 dev:
-  host: sensisagency.com
+  host: dev.sensisagency.com
   user: cristian100
   root: /var/www/drupal/d8/challengeplatform/dev/docroot
   uri: challengeplatform.dev.sensisagency.com
