@@ -97,19 +97,6 @@ class HelloForm extends FormBase {
   }
 
   /**
-   * Validate the title and the checkbox of the form.
-   *
-   * @param array $form
-   *   The form.
-   * @param \Drupal\Core\Form\FormStateInterface $form_state
-   *   The form state.
-   */
-  public function validateForm(array &$form, FormStateInterface $form_state) {
-    parent::validateForm($form, $form_state);
-
-  }
-
-  /**
    * Form submission handler.
    *
    * @param array $form
@@ -124,7 +111,7 @@ class HelloForm extends FormBase {
     $form_state->setRedirect('<front>');
     $name_form = $form_state->getValue('submit_name');
     $lead_name_form = $form_state->getValue('lead_name');
-    $title_form = $campaing_form . ' ' . $name_form;
+    $title_form = $name_form;
     $doc_form = $form_state->getValue('pdf_file');
     $body_form = $form_state->getValue('body');
 
@@ -149,6 +136,7 @@ function get_campaing_values() {
   $node = \Drupal::routeMatch()->getParameter('node');
   if ($node instanceof NodeInterface) {
     $nid = $node->id();
+    $node = Node::load($nid);
   }
 
   return $nid;
