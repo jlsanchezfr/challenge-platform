@@ -1,0 +1,36 @@
+uuid: 3edc9601-5edc-48ba-bba1-88ddb9535b9b
+langcode: en
+status: true
+dependencies:
+  module:
+    - challenge_platform
+    - ctools
+    - node
+  theme:
+    - challengeplatform
+id: projectform
+theme: challengeplatform
+region: content
+weight: -6
+provider: null
+plugin: challenge_form_block
+settings:
+  id: challenge_form_block
+  label: 'Project form'
+  provider: challenge_platform
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      project: project
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  node_type:
+    id: node_type
+    bundles:
+      project: project
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

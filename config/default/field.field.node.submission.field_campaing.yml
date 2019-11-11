@@ -1,0 +1,28 @@
+uuid: b203fa45-f4bf-4e4b-a3c5-1f13e48e10a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campaing
+    - node.type.project
+    - node.type.submission
+id: node.submission.field_campaing
+field_name: field_campaing
+entity_type: node
+bundle: submission
+label: Campaing
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      project: project
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

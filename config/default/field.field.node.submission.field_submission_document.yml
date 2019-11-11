@@ -1,0 +1,27 @@
+uuid: a82651db-bc77-45e2-b8aa-428216d687ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_submission_document
+    - node.type.submission
+  module:
+    - file
+id: node.submission.field_submission_document
+field_name: field_submission_document
+entity_type: node
+bundle: submission
+label: 'Submission Document'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: '50 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

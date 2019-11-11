@@ -1,0 +1,19 @@
+uuid: d70f2060-cda1-4c3d-8eb3-82c1df89e2dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_name
+    - node.type.submission
+id: node.submission.field_lead_name
+field_name: field_lead_name
+entity_type: node
+bundle: submission
+label: 'Lead Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

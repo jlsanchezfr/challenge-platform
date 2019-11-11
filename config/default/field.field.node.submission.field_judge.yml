@@ -1,0 +1,32 @@
+uuid: d61acc82-7084-4c5d-9083-49ebc2e2ebff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_judge
+    - node.type.submission
+id: node.submission.field_judge
+field_name: field_judge
+entity_type: node
+bundle: submission
+label: Judge
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: role
+      role:
+        judge: judge
+        administrator: '0'
+        project_owner: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

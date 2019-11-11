@@ -1,0 +1,21 @@
+uuid: 6b742974-616b-446f-a239-81250ce6e3c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.evaluation_question.field_question
+    - paragraphs.paragraphs_type.evaluation_question
+id: paragraph.evaluation_question.default
+targetEntityType: paragraph
+bundle: evaluation_question
+mode: default
+content:
+  field_question:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  search_api_excerpt: true

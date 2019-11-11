@@ -1,0 +1,11 @@
+framework:
+  css:
+    theme:
+      css/style.css: {}
+  js:
+
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupalSettings

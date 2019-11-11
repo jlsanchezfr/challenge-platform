@@ -1,0 +1,5 @@
+name: Challenge Platform Module
+description: Provide functionalty for Challenge Platform.
+package: Custom
+type: module
+core: 8.x

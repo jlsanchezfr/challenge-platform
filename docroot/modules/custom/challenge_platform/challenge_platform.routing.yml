@@ -1,0 +1,6 @@
+hello.content:
+  defaults:
+    _plugin: 'Drupal\Plugin\Block\FormBlock'
+    _title: 'Hello World'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,23 @@
+uuid: 41da39ec-761c-43fe-81cc-b83a1b96001d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_evaluation_percentage
+    - paragraphs.paragraphs_type.evaluation_criteria
+id: paragraph.evaluation_criteria.field_evaluation_percentage
+field_name: field_evaluation_percentage
+entity_type: paragraph
+bundle: evaluation_criteria
+label: 'Evaluation Percentage'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: 100
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,22 @@
+uuid: 31e3e1e9-0747-4f54-9529-e72e8763ae5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - challengeplatform
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: challengeplatform_messages
+theme: challengeplatform
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

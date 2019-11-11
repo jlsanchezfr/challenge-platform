@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Provides create node function when a new user with judge role is registered.
+ */
+
+use Drupal\node\Entity\Node;
+use Drupal\user\Entity\User;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Create node for every judge is registered.
+ */
+function challenge_platform_user_insert(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'user') {
+    $uid = $entity->id();
+    $account = User::load($uid);
+    $isJudge = $account->hasRole('judge');
+    $name = $account->getUsername();
+    // Logs a notice.
+    if ($isJudge == TRUE) {
+      \Drupal::logger('ChallengePlatform')->notice('Created user with id ' . $uid);
+
+      Node::create([
+        'type' => 'judge',
+        'title' => 'Judge ' . $uid,
+        'uid' => $uid,
+        'field_judge_account' => $uid,
+        'field_judge_name' => $name,
+      ])->save();
+
+    }
+
+  }
+
+}

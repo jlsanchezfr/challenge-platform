@@ -1,0 +1,20 @@
+uuid: 6fc08aec-a880-4abe-9fbb-66824a0ef8ca
+langcode: en
+status: true
+dependencies:
+  theme:
+    - challengeplatform
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: challengeplatform_local_actions
+theme: challengeplatform
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

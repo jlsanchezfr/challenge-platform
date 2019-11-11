@@ -1,0 +1,14 @@
+uuid: 6526f81e-6f9c-4452-b403-5fe863473415
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: project_owner
+label: 'Project Owner'
+weight: 4
+is_admin: null
+permissions: {  }

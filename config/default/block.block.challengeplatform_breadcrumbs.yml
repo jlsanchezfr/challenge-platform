@@ -1,0 +1,22 @@
+uuid: f27c9ba5-36f3-4da6-9a91-9e4e9d244666
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - challengeplatform
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: challengeplatform_breadcrumbs
+theme: challengeplatform
+region: navigation
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

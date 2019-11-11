@@ -1,0 +1,23 @@
+uuid: 20c22a9f-3784-4b87-b033-84153ca09c1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.evaluation_question.field_question
+    - paragraphs.paragraphs_type.evaluation_question
+id: paragraph.evaluation_question.default
+targetEntityType: paragraph
+bundle: evaluation_question
+mode: default
+content:
+  field_question:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  created: true
+  status: true

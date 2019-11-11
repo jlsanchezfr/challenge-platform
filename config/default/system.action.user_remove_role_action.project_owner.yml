@@ -1,0 +1,14 @@
+uuid: c406b720-682d-45de-a81e-661b74a0bb76
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.project_owner
+  module:
+    - user
+id: user_remove_role_action.project_owner
+label: 'Remove the Project Owner role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: project_owner
